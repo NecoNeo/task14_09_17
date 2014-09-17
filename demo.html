@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="uft-8">
+    <title>DEMO</title>
+    <script src="demo.js"></script>
+    <style type="text/css">
+    #input {
+        height: 50px;
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <textarea id="input"></textarea>
+        <button id="btn">DEMO</button>
+        <div id="output"></div>
+    </div>
+    <script>
+    var input = document.getElementById('input');
+    var btn = document.getElementById('btn');
+    var outputbox = document.getElementById('output');
+    btn.onclick = function() {
+        output = [];
+        a = new testObj(["name","gender","age"], JSON.parse(input.value));
+        outputbox.innerHTML = JSON.stringify(output);
+    };
+    </script>
+</body>
+</html>
