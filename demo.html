@@ -14,17 +14,18 @@
 <body>
     <div>
         <textarea id="input"></textarea>
+        <textarea id="keyinput"></textarea>
         <button id="btn">DEMO</button>
         <div id="output"></div>
     </div>
     <script>
     var input = document.getElementById('input');
+    var keyinput = document.getElementById('keyinput');
     var btn = document.getElementById('btn');
     var outputbox = document.getElementById('output');
     btn.onclick = function() {
-        output = [];
-        a = new testObj(["name","gender","age"], JSON.parse(input.value));
-        outputbox.innerHTML = JSON.stringify(output);
+        a = new testObj(JSON.parse(keyinput.value), JSON.parse(input.value));
+        outputbox.innerHTML = JSON.stringify(a);
     };
     </script>
 </body>
